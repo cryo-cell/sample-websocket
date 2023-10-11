@@ -1,0 +1,52 @@
+
+#app{
+    text-align: center;
+    font-style: oblique;
+    font-size: 18px;
+    
+    }
+    #container{
+        max-width: 600px;
+        margin: auto;
+        
+    
+    }
+    #loader{
+        display: inherit;
+        justify-content: center;
+    }
+    
+    #output{
+        display: flex;
+        justify-content: space-around;
+        max-width: 300px;   
+        margin: auto;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    span{
+        font-weight: 800;
+    }
+    #loading{
+        max-height: 300px;
+        border-radius: 50%;
+    }
+    .btn {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #bigCont{
+        display: flex;
+        align-items: center;
+    }
+    #cont{
+        display: flex;
+        max-height: 300px;
+        max-width: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+    }
