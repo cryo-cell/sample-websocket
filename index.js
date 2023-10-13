@@ -8,7 +8,7 @@ const {Server} = require("socket.io")
 const port = process.env.PORT || 3000;
 //port for the app to listen on
 //wrapping express server in http server
-const io= new Server(server)
+const io= require('socket.io').listen(server)
 app.use(express.static(path.resolve("")))
 
 let arr =[];
