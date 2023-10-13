@@ -45,7 +45,10 @@
         </div> 
     </div> 
     </div>
+        <script src="index.js"></script>
         <script defer>
+            import { io } from "socket.io-client";
+
             window.onload = () => {
             //write your code here
             document.getElementById("userCont").style.display = "none"
@@ -54,7 +57,6 @@
             document.getElementById("whosTurn").style.display = "none"
             document.getElementById("loader").style.display = "none"
             document.getElementById("valueCont").style.display = "none"
-
             const socket = io();
             let name;
 
