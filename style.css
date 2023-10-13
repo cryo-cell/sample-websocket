@@ -1,8 +1,16 @@
-
+@font-face {
+    font-family: deviousSans;
+    src: url(./devious_sans_by_nightingale1000_ddw766i/Devious\ Sans\ Extra\ Bold.ttf);
+}
+body{
+    background: #06070d;
+    color: white;
+    font-family: deviousSans;
+}
 #app{
     text-align: center;
-    font-style: oblique;
     font-size: 18px;
+    font-weight: 900;
     
     }
     #container{

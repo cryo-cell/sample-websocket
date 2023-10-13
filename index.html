@@ -109,6 +109,7 @@
             document.querySelectorAll(".btn").forEach(e=>{
                 e.addEventListener("click", function(){
                     let value = document.getElementById("value").innerText
+                    document.getElementById(e.id).disabled=true;
                     socket.emit("playing", {value:value,id:e.id,name:name})
                 })
             })
@@ -118,7 +119,6 @@
                 p1id=foundObj.p1.p1move
                 p2id=foundObj.p2.p2move
 
-                
                 if((foundObj.sum)%2==0){
                     document.getElementById("whosTurn").innerText="O's Turn"
                     if((document.getElementById("user").innerText!==foundObj.p2.p2name)){
@@ -130,8 +130,9 @@
                     else { 
                     let elems = document.getElementsByClassName("btn");
                     for(var i = 0; i < elems.length; i++) {
-                        elems[i].disabled = false;
+                        if(elems[i].innerText==""){elems[i].disabled = false;}
                     }
+                    
                     }
                     
                 }
@@ -147,7 +148,7 @@
                     else { 
                     let elems = document.getElementsByClassName("btn");
                     for(var i = 0; i < elems.length; i++) {
-                        elems[i].disabled = false;
+                        if (elems[i].innerText==""){elems[i].disabled = false;}
                     }
                     }
                     
