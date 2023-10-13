@@ -2,11 +2,11 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const http = require("http")
+const server=http.createServer(app)
 const {Server} = require("socket.io")
 
 const port = process.env.PORT || 3000;
 //port for the app to listen on
-const server=http.createServer(app)
 //wrapping express server in http server
 const io= new Server(server)
 app.use(express.static(path.resolve("")))
